@@ -11,12 +11,10 @@ form.addEventListener("submit", (e) => {
         return alert("Uzupełnij wszystkie pola!");
     }
 
-    const outputArray = new Map([
+    const outputArray = [
         [email.name, email.value],
         [password.name, password.value]
-    ]);
-
-    console.log(outputArray);
+    ];
 
     const outputObject = Object.fromEntries(outputArray);
 
