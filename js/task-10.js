@@ -13,14 +13,16 @@ function getRandomHexColor() {
 };
 
 createBtn.addEventListener('click', () => {
-  for (let i = 0; i < amount; i++){
+  if (amount <= 100) {
+    for (let i = 0; i < amount; i++){
     const box = document.createElement("div");
     box.style.width = 30 + 10 * i + "px";
     box.style.height = 30 + 10 * i + "px";
     const color = getRandomHexColor();
     box.style.backgroundColor = color;
     boxes.append(box);
-  }
+  }}else{alert("You don't expect too much from this function, sir? 100 is enough :)")}
+ 
 })
 
 destroyBtn.addEventListener('click', () => {
